@@ -1,25 +1,14 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%", 
-  eval = FALSE
-)
-```
 
 # darkmode
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-The goal of darkmode is to provide a wrapper for [Darkmode.js](https://github.com/sandoche/Darkmode.js) in `{shiny}`.
+The goal of darkmode is to provide a wrapper for
+[Darkmode.js](https://github.com/sandoche/Darkmode.js) in `{shiny}`.
 
 ## Installation
 
@@ -33,7 +22,7 @@ remotes::install_github("colinfay/darkmode")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+``` r
 library(darkmode)
 library(shiny)
 ui <- function(request){
@@ -60,7 +49,7 @@ shinyApp(ui, server)
 
 You can set parameters for the darkmode:
 
-```{r example2}
+``` r
 library(darkmode)
 library(shiny)
 ui <- function(request){
@@ -84,6 +73,5 @@ server <- function(
 
 shinyApp(ui, server)
 ```
-
 
 ![](readmefigs/darkmode.gif)
