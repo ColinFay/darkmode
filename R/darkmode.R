@@ -3,7 +3,6 @@
 #' @param bottom,right,left,time,mixColor,backgroundColor,buttonColorDark,buttonColorLight,saveInCookies,label,autoMatchOsTheme Parameters to pass to Darkmode.js
 #' @rdname darkmode
 #' @export
-#' @importFrom shiny addResourcePath
 #' @importFrom jsonlite toJSON
 #' @importFrom htmltools tags tagList
 with_darkmode <- function(

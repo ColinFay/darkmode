@@ -7,13 +7,10 @@
 with_darkmode(bottom = "32px", right = "32px", left = "unset",
   time = "0.3s", mixColor = "#fff", backgroundColor = "#fff",
   buttonColorDark = "#100f2c", buttonColorLight = "#fff",
-  saveInCookies = TRUE, label = "", autoMatchOsTheme = TRUE,
-  online = TRUE)
+  saveInCookies = TRUE, label = "", autoMatchOsTheme = TRUE)
 }
 \arguments{
 \item{bottom, right, left, time, mixColor, backgroundColor, buttonColorDark, buttonColorLight, saveInCookies, label, autoMatchOsTheme}{Parameters to pass to Darkmode.js}
-
-\item{online}{Use CDN or local version}
 }
 \description{
 Title
