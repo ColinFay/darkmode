@@ -1,7 +1,6 @@
 #' Title
 #'
 #' @param bottom,right,left,time,mixColor,backgroundColor,buttonColorDark,buttonColorLight,saveInCookies,label,autoMatchOsTheme Parameters to pass to Darkmode.js
-#' @param online Use CDN or local version
 #' @rdname darkmode
 #' @export
 #' @importFrom shiny addResourcePath
@@ -18,19 +17,8 @@ with_darkmode <- function(
   buttonColorLight = '#fff',
   saveInCookies = TRUE,
   label = '',
-  autoMatchOsTheme = TRUE,
-  online = TRUE
+  autoMatchOsTheme = TRUE
 ){
-  if (online){
-    src <- "https://cdn.jsdelivr.net/npm/darkmode-js@1.5.3/lib/darkmode-js.min.js"
-  } else {
-    src <- "www/darkmode-js.min.js"
-  }
-
-  addResourcePath(
-    "www", system.file(package = "darkmode")
-  )
-
   options <- list(
     bottom = bottom,
     right = right,
@@ -45,18 +33,29 @@ with_darkmode <- function(
     autoMatchOsTheme = autoMatchOsTheme
   )
 
-  options <- toJSON( options, auto_unbox = TRUE)
+  options <- toJSON(options, auto_unbox = TRUE)
 
   tagList(
-    tags$script(
-      src = src
-    ),
+    html_dependency_darkmode(),
     tags$script(
       sprintf(
         'const darkmode = new Darkmode(%s); darkmode.showWidget();',
         options
       )
-
     )
+  )
+}
+
+html_dependency_darkmode <- function() {
+  htmltools::htmlDependency(
+    name = "darkmode-js",
+    version = "1.5.3",
+    package = "darkmode",
+    src = "",
+    script = c(
+      file = "darkmode-js.min.js",
+      href = "https://cdn.jsdelivr.net/npm/darkmode-js@1.5.3/lib/darkmode-js.min.js"
+    ),
+    all_files = FALSE
   )
 }
