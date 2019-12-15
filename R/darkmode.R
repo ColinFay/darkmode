@@ -50,11 +50,11 @@ html_dependency_darkmode <- function() {
     name = "darkmode-js",
     version = "1.5.3",
     package = "darkmode",
-    src = "",
-    script = c(
-      file = "darkmode-js.min.js",
-      href = "https://cdn.jsdelivr.net/npm/darkmode-js@1.5.3/lib/darkmode-js.min.js"
+    src = c(
+      file = "",
+      href = "https://cdn.jsdelivr.net/npm/darkmode-js@1.5.3/lib/"
     ),
+    script = "darkmode-js.min.js",
     all_files = FALSE
   )
 }
