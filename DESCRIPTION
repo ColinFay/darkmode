@@ -6,7 +6,12 @@ Authors@R:
            family = "Fay",
            role = c("aut", "cre"),
            email = "contact@colinfay.me",
-           comment = c(ORCID = "0000-0001-7343-1846")), 
+           comment = c(ORCID = "0000-0001-7343-1846")),
+      person(given = "Garrick", 
+             family = "Aden-Buie", 
+             email = "garrick@adenbuie.com", 
+             role = c("ctb"), 
+             comment = c(ORCID = "0000-0002-7111-0077")),
       person(given = "Sandoche",
            family = "Adittane",
            role = c("aut"),
@@ -19,5 +24,4 @@ LazyData: true
 RoxygenNote: 6.1.1
 Imports: 
     jsonlite,
-    htmltools,
-    shiny
+    htmltools
