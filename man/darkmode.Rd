@@ -2,12 +2,24 @@
 % Please edit documentation in R/darkmode.R
 \name{with_darkmode}
 \alias{with_darkmode}
+\alias{html_dependency_darkmode}
 \title{Title}
 \usage{
-with_darkmode(bottom = "32px", right = "32px", left = "unset",
-  time = "0.3s", mixColor = "#fff", backgroundColor = "#fff",
-  buttonColorDark = "#100f2c", buttonColorLight = "#fff",
-  saveInCookies = TRUE, label = "", autoMatchOsTheme = TRUE)
+with_darkmode(
+  bottom = "32px",
+  right = "32px",
+  left = "unset",
+  time = "0.3s",
+  mixColor = "#fff",
+  backgroundColor = "#fff",
+  buttonColorDark = "#100f2c",
+  buttonColorLight = "#fff",
+  saveInCookies = TRUE,
+  label = "",
+  autoMatchOsTheme = TRUE
+)
+
+html_dependency_darkmode()
 }
 \arguments{
 \item{bottom, right, left, time, mixColor, backgroundColor, buttonColorDark, buttonColorLight, saveInCookies, label, autoMatchOsTheme}{Parameters to pass to Darkmode.js}
