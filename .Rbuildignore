@@ -1,1 +1,5 @@
 ^\.github$
+^README\.md$
+^README\.Rmd$
+^LICENSE\.md$
+readmefigs/

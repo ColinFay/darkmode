@@ -1,16 +1,16 @@
 Package: darkmode
 Title: 'darkmode.js' for 'Shiny'
-Version: 0.0.0.9000
-Authors@R: 
+Version: 1.0.0
+Authors@R:
     c(person(given = "Colin",
            family = "Fay",
            role = c("aut", "cre"),
            email = "contact@colinfay.me",
            comment = c(ORCID = "0000-0001-7343-1846")),
-      person(given = "Garrick", 
-             family = "Aden-Buie", 
-             email = "garrick@adenbuie.com", 
-             role = c("ctb"), 
+      person(given = "Garrick",
+             family = "Aden-Buie",
+             email = "garrick@adenbuie.com",
+             role = c("ctb"),
              comment = c(ORCID = "0000-0002-7111-0077")),
       person(given = "Sandoche",
            family = "Adittane",
@@ -22,9 +22,9 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
-Imports: 
+Imports:
     jsonlite,
     htmltools
-Suggests: 
+Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

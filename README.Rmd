@@ -9,14 +9,15 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%", 
-  eval = FALSE
+  out.width = "100%",
+  eval = TRUE
 )
 ```
 
 # darkmode
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/ColinFay/darkmode/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ColinFay/darkmode/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of darkmode is to provide a wrapper for [Darkmode.js](https://github.com/sandoche/Darkmode.js) in `{shiny}`.
@@ -26,27 +27,50 @@ The goal of darkmode is to provide a wrapper for [Darkmode.js](https://github.co
 You can install the released version of darkmode from GitHub with
 
 ``` r
-remotes::install_github("colinfay/darkmode")
+pak::pak("colinfay/darkmode")
 ```
+
+## About
+
+You're reading the doc about version : `r pkgload::pkg_version()`
+
+This README has been compiled on the
+
+```{r}
+Sys.time()
+```
+
+Here are the test & coverage results :
+
+```{r}
+devtools::check(quiet = TRUE)
+```
+
+```{r echo = FALSE}
+unloadNamespace("darkmode")
+```
+
+```{r}
+covr::package_coverage()
+```
+
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
+```{r example, eval = FALSE}
 library(darkmode)
 library(shiny)
 ui <- function(request){
   fluidPage(
-    with_darkmode(), 
-    h2("Plop"), 
+    with_darkmode(),
+    h2("Plop"),
     tableOutput("bing")
   )
 }
 
 server <- function(
-  input, 
-  output, 
+  input,
+  output,
   session
 ){
 
@@ -60,20 +84,20 @@ shinyApp(ui, server)
 
 You can set parameters for the darkmode:
 
-```{r example2}
+```{r example2, eval = FALSE}
 library(darkmode)
 library(shiny)
 ui <- function(request){
   fluidPage(
     with_darkmode(label = "🤘"),
-    h2("Plop"), 
+    h2("Plop"),
     tableOutput("bing")
   )
 }
 
 server <- function(
-  input, 
-  output, 
+  input,
+  output,
   session
 ){
 
