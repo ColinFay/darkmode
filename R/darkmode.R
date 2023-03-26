@@ -15,7 +15,7 @@ with_darkmode <- function(
   buttonColorDark = '#100f2c',
   buttonColorLight = '#fff',
   saveInCookies = TRUE,
-  label = '',
+  label = "",
   autoMatchOsTheme = TRUE
 ){
   options <- list(
@@ -38,13 +38,15 @@ with_darkmode <- function(
     html_dependency_darkmode(),
     tags$script(
       sprintf(
-        'const darkmode = new Darkmode(%s); darkmode.showWidget();',
+        'window.addEventListener("load", function(){new Darkmode(%s).showWidget();});',
         options
       )
     )
   )
 }
 
+#' @rdname darkmode
+#' @export
 html_dependency_darkmode <- function() {
   htmltools::htmlDependency(
     name = "darkmode-js",
